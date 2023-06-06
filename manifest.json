@@ -1,44 +1,31 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Facebook Extension",
   "version": "1.0",
   "description": "Extension for updating Facebook page info",
   "permissions": [
-    "tabs",
-    "scripting"
+      "tabs",
+      "https://graph.facebook.com/*"
   ],
-  "host_permissions": [
-    "https://graph.facebook.com/*"
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
+  "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+          "16": "icon16.png",
+          "32": "icon32.png",
+          "48": "icon48.png",
+          "128": "icon128.png"
+      }
+  },
+  "icons": {
       "16": "icon16.png",
       "32": "icon32.png",
       "48": "icon48.png",
       "128": "icon128.png"
-    }
-  },
-  "icons": {
-    "16": "icon16.png",
-    "32": "icon32.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
   },
   "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html"
+      "scripts": ["background.js"]
   },
   "web_accessible_resources": [
-    {
-      "resources": [
-        "assets/*"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
+      "assets/*"
   ]
 }

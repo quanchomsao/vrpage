@@ -3,36 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Facebook Extension</title>
-  <style>
-    body {
-      background-color: #f1f1f1;
-      font-family: Arial, sans-serif;
-      padding: 10px;
-    }
-    h1 {
-      color: #333;
-    }
-    #status {
-      margin-top: 20px;
-    }
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-  </style>
-  <script src="popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="popup.css"> <!-- Thêm file CSS vào HTML -->
 </head>
 <body>
   <h1>Facebook Extension</h1>
-  <button class="button" id="startButton">Start</button>
-  <div id="status"></div>
+  <button id="updateButton">Update</button> <!-- Thêm nút Update -->
+  <script src="popup.js"></script>
 </body>
 </html>

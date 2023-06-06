@@ -1,7 +1,6 @@
 chrome.action.onClicked.addListener((tab) => {
-  chrome.tabs.create({url: chrome.runtime.getURL('popup.html')});
+  chrome.tabs.create({ url: "popup.html" });
 });
-
 
 // Hàm để thay đổi thông tin cho một trang cụ thể
 async function updatePageInfo(pageId, accessToken, updatedInfo) {
